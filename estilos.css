@@ -1,0 +1,267 @@
+body{
+    margin: 0;
+    font-family: "Poetsen One", sans-serif;
+}
+a img{
+    width: 100vw;
+    height: 8vw;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+nav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+header {
+    position: relative;
+}
+
+.titulo-principal {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.titulo-principal a {
+    color: #FFB200;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.titulo-principal a:hover {
+    color: #FF9500;
+}
+
+@media (max-width: 1200px) {
+    .titulo-principal {
+        left: 30px;
+    }
+    .titulo-principal a {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .titulo-principal a {
+        font-size: 1.8em;
+    }
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    gap: 40px;
+}
+
+#menu li a {
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#menu li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00ff88;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+#menu li a:hover {
+    color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#menu li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+iframe{
+    width: 60vw;
+    height: 5vw;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.videos {
+    flex: 3 1 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.video {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border: 2px solid #1a1a1a;
+}
+
+.video h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    color: #1a1a1a;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00ff88;
+}
+
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.publicidad-container {
+    flex: 1 1 300px;
+    align-self: flex-start;
+    position: sticky;
+    top: 2rem;
+}
+
+.publicidad {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #1a1a1a;
+}
+
+.publicidad h2 {
+    border-bottom: 2px solid #00ff88;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.publicidad img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.redes li a {
+    color: white;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.redes li a:hover {
+    color: #FFB200;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .videos {
+        flex: 1 1 100%;
+    }
+    
+    .publicidad-container {
+        flex: 1 1 100%;
+        position: static;
+    }
+    .titulo-principal a {
+        font-size: 2.5em;
+    }
+    nav {
+        position: static;
+        transform: none;
+    }
+    #menu {
+        justify-content: center;
+        padding-right: 0;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .publicidad {
+        padding: 0.5rem 0.2rem;
+        font-size: 0.95em;
+    }
+    .publicidad img {
+        border-radius: 4px;
+    }
+    .titulo-principal a {
+        font-size: 2em;
+    }
+    #menu {
+        padding-right: 20px;
+        gap: 10px;
+    }
+}

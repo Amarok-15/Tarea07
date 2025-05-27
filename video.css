@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: "Poetsen One", sans-serif;
+}
+
+a img {
+    width: 100vw;
+    height: 8vw;
+}
+
+header {
+    position: relative;
+}
+
+.titulo-principal {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.titulo-principal a {
+    color: #FFB200;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.titulo-principal a:hover {
+    color: #FF9500;
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+    gap: 40px;
+    margin: 0;
+    list-style: none;
+}
+
+#menu li a {
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+
+#menu li a:hover {
+    color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+footer {
+    background-color: #1a1a1a;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.redes li a {
+    color: white;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.redes li a:hover {
+    color: #FFB200;
+    transform: translateY(-5px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.videos {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 2px solid #1a1a1a;
+}
+
+.video-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+    font-size: 1.5em;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #FFB200;
+}
+
+video {
+    width: 100%;
+    border-radius: 4px;
+    background: #000;
+}
+
+@media (max-width: 1200px) {
+    .titulo-principal {
+        left: 30px;
+    }
+    .titulo-principal a {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-principal {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 1rem 0;
+    }
+    .titulo-principal a {
+        font-size: 1.8em;
+    }
+    #menu {
+        padding-right: 50px;
+        gap: 20px;
+    }
+    .redes {
+        gap: 1.5rem;
+    }
+    .redes li a {
+        font-size: 1.2em;
+    }
+    .container {
+        padding: 1rem;
+    }
+    
+    .video-container {
+        padding: 1rem;
+    }
+    
+    .video-container h2 {
+        font-size: 1.2em;
+    }
+}
